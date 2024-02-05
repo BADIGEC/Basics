@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            <input type="text" id="i1" placeholder="Enter password" onfocus="Focus()" onblur="Blur" onkeyup="PasswordChange">
+            <span id="strength"> No strength </span>
+        </form>
+        <script>
+            function Focus(){
+                document.getElementById("i1").style.background="red";
+            }
+            function Blur(){
+                document.getElementById("i1").style.background="yellow";
+            }
+            function PasswordChange(){
+                var pwd =getElementById("i1").value;
+                if(pwd.length==0){
+                    document.getElementById("strength").innerHTML="No strength";
+                }
+                else if(pwd.lengths<5){
+                    document.getElementById("strength").innerHTML="Poor";
+                }
+                else{
+                    document.getElementById("strength").innerHTML="Good";
+                }
+            }
+            
+        </script>
+    </body>
+
+</html>
